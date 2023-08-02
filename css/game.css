@@ -25,6 +25,7 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    transition: all 400ms ease;
 }
 
 .front {
@@ -40,7 +41,7 @@
     transform: rotateY(180deg);
 }
 
-.disabled {
+.disabled-card {
     filter: saturate(0);
     opacity: 0.5;
 }
