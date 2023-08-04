@@ -1,6 +1,6 @@
 const grid = document.querySelector('.grid');
 const spanPlayer = document.querySelector('.player');
-const timer = document.querySelector('.timer')
+const timer = document.querySelector('.timer');
 
 const characters = [
     'beth',
@@ -29,7 +29,10 @@ const checkEndGame = () => {
 
     if(disabledCards.length === 20){
         clearInterval(this.loop);
-        setTimeout(()=>{alert(`Parabéns ${spanPlayer.innerHTML}! Seu tempo foi de ${timer.innerHTML}!`)}, 400);
+        setTimeout(()=>{
+            alert(`Parabéns ${spanPlayer.innerHTML}! Seu tempo foi de ${timer.innerHTML} segundos! Clique em "ok" para jogar novamente`);
+            location.reload(false);
+        }, 400);
     }
 }
 
